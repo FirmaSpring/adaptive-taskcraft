@@ -4,11 +4,13 @@ Adaptive Taskcraft is an original synthesis. It does not copy or bundle third-pa
 
 ## Primary influences
 
-- [hexiecs/talk-normal](https://github.com/hexiecs/talk-normal), MIT — direct, natural responses; resistance to canned filler and repeated conclusions. Adaptive Taskcraft adds proportional detail, evidence, and safety so brevity does not erase necessary nuance.
-- [openai/skills](https://github.com/openai/skills) — task planning, CI diagnosis, durable CLI design, security threat modeling, and Figma implementation workflows. Consult each skill's own license or notice before copying its text or code. Adaptive Taskcraft restates workflow concepts independently.
-- [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills) — browser-based web-app testing, MCP workflow design, and external-service connectivity. Consult the repository and individual files for current licensing before reuse; no code is bundled here.
-- [obra/superpowers](https://github.com/obra/superpowers), MIT — requirements discovery, planning, TDD, systematic debugging, review, and verification discipline. Adaptive Taskcraft replaces always-on ceremony with risk-adaptive lanes and vertical behavior slices.
-- [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard), MIT — evidence that API-visible tool catalogs and injected context can affect a model's initial trajectory; bootstrap, promotion, resident catalogs, durable phase state, and safe fallback. Adaptive Taskcraft generalizes this into model-neutral progressive context discipline and explicitly requires benchmarking before provider-specific anchoring.
+The source revisions below are the versions reviewed during synthesis. Only general workflow ideas were independently re-expressed; no third-party implementation files are distributed here.
+
+- [hexiecs/talk-normal](https://github.com/hexiecs/talk-normal/tree/d89cf329e775e640181427fae071652198264c7e) at `d89cf329e`, MIT; reviewed `prompt.md`, `skill/SKILL.md`, and `skill-hermes/SKILL.md` — direct, natural responses and resistance to canned filler.
+- [openai/skills](https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431) at `49f948fa`, per-skill licensing; reviewed curated CLI creator, Figma implementation, CI repair, and threat-model skill files. No root-wide license is inferred.
+- [ComposioHQ/awesome-codex-skills](https://github.com/ComposioHQ/awesome-codex-skills/tree/0930e1373789d2eda449039f7ac154b33031de89) at `0930e137`, mixed per-skill licensing; reviewed `gh-fix-ci`, `webapp-testing`, `mcp-builder`, `connect`, and adjacent license files. No repository-wide license is inferred.
+- [obra/superpowers](https://github.com/obra/superpowers/tree/b36e0829c6d0140e93cfef2ca599b1b07d4a7797) at `b36e0829`, MIT; reviewed brainstorming, writing-plans, TDD, and systematic-debugging skill files.
+- [xiaobright/dsh-anchored-standard](https://github.com/xiaobright/dsh-anchored-standard/tree/0a38616c1b7ce4219b6d94d95c89f34a90741616) at `0a38616c`, Apache-2.0; reviewed `README.md`, `shared/anchor-turn.mjs`, `shared/dev-tool-search.mjs`, `shared/skill-search.mjs`, and `shared/zero-tool-bootstrap.mjs` — first-turn anchoring, bootstrapping, and progressive discovery. Adaptive Taskcraft generalizes these ideas without bundling its implementation.
 
 ## Article that motivated the survey
 
