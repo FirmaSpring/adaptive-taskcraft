@@ -37,6 +37,10 @@ Load the core `SKILL.md` first. Read `references/capability-modules.md` only whe
 
 Load `adaptive-taskcraft` for substantive answers, software changes, debugging, reviews, integrations, and multi-step execution. The skill itself decides whether the task needs direct action, a guided workflow, or engineered controls.
 
+## Language Support
+
+English, Simplified/Traditional Chinese, and Japanese are supported. The agent matches the user's language and register while preserving identifiers, commands, logs, and exact error text. Multilingual rules live in [`references/language-adaptation.md`](references/language-adaptation.md).
+
 ## Principles
 
 - natural answers without filler;

@@ -37,6 +37,10 @@ Adaptive Taskcraft 会选择足以产出可信证据的最小流程。
 
 在需要可靠回答、软件开发、调试、审查、外部集成或多步骤执行时加载 `adaptive-taskcraft`。技能会自行判断任务应当直接处理、引导式执行，还是进入工程化控制。
 
+## 语言支持
+
+支持英文、简体中文、繁体中文和日文。Agent 会匹配用户使用的语言与语气，同时保留标识符、命令、日志和精确错误信息。多语言规则位于 [`references/language-adaptation.md`](references/language-adaptation.md)。
+
 ## 核心原则
 
 - 直接自然地回答，不堆空话；

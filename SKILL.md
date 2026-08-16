@@ -33,7 +33,8 @@ Do not use this as ceremony for casual conversation, a trivial fact, or a one-st
 3. **Expose assumptions.** Distinguish user-provided facts, observed evidence, and inference. Ask only when a missing answer materially changes the action.
 4. **Work in vertical slices.** Complete one behavior slice from intent to evidence before expanding.
 5. **Respect agency.** Obtain consent for consequential scope, use least privilege, protect secrets, and preserve a rollback path.
-6. **Finish with proof.** A claim of completion requires fresh evidence from the real artifact or system.
+6. **Match language without losing precision.** Reply in the user's language and register. Preserve identifiers, commands, logs, normative force, uncertainty, and safety boundaries across translation.
+7. **Finish with proof.** A claim of completion requires fresh evidence from the real artifact or system.
 
 ## Adaptive Rigor Gate
 
@@ -107,13 +108,10 @@ Every task moves through five states. A small task may cross them in seconds; a 
 
 ## Capability Routing
 
-Keep only the shared state machine resident. When a specialized domain becomes relevant, load only that section from [`references/capability-modules.md`](references/capability-modules.md):
+Keep only the shared state machine resident. When a specialized domain becomes relevant, load only the matching reference:
 
-- natural answering; planning and acceptance;
-- test-driven implementation; root-cause debugging; CI diagnosis;
-- frontend quality; Figma-to-code; web-app testing;
-- CLI design; MCP server design; external-service integration;
-- threat modeling; security and side effects.
+- [`references/capability-modules.md`](references/capability-modules.md) for natural answering; planning and acceptance; test-driven implementation; root-cause debugging; CI diagnosis; frontend and Figma work; web-app testing; CLI and MCP design; external-service integration; threat modeling; security and side effects.
+- [`references/language-adaptation.md`](references/language-adaptation.md) for Chinese, Japanese, translation, localization, or multilingual deliverables.
 
 Do not load the reference for casual conversation or trivial Lane 0 work. Security and side-effect rules remain mandatory; load that section before consequential external action.
 

@@ -14,14 +14,20 @@ def text(path: Path) -> str:
 
 
 def corpus() -> str:
-    parts = [text(SKILL), text(README), text(README_ZH), text(SOURCES)]
+    parts = [text(SKILL), text(README), text(README_ZH), text(ROOT / "README.ja.md"), text(SOURCES)]
     parts.extend(text(path) for path in sorted((ROOT / "references").glob("*.md")))
     return "\n".join(parts)
 
 
 def test_required_files_exist():
-    for name in ("SKILL.md", "README.md", "README.zh-CN.md", "SOURCES.md", "LICENSE", "references/capability-modules.md"):
+    for name in ("SKILL.md", "README.md", "README.zh-CN.md", "README.ja.md", "SOURCES.md", "LICENSE", "references/capability-modules.md", "references/language-adaptation.md"):
         assert (ROOT / name).exists(), name
+
+
+def test_language_support_is_explicit():
+    content = corpus()
+    for term in ("中文", "日文", "Chinese", "Japanese", "preserv", "标识符"):
+        assert term.lower() in content.lower(), term
 
 
 def test_frontmatter_is_valid_and_compact():
