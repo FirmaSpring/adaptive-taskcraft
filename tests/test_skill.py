@@ -13,9 +13,15 @@ def text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def corpus() -> str:
+    parts = [text(SKILL), text(README), text(README_ZH), text(SOURCES)]
+    parts.extend(text(path) for path in sorted((ROOT / "references").glob("*.md")))
+    return "\n".join(parts)
+
+
 def test_required_files_exist():
-    for path in (SKILL, README, README_ZH, SOURCES, LICENSE):
-        assert path.exists(), path
+    for name in ("SKILL.md", "README.md", "README.zh-CN.md", "SOURCES.md", "LICENSE", "references/capability-modules.md"):
+        assert (ROOT / name).exists(), name
 
 
 def test_frontmatter_is_valid_and_compact():
@@ -37,7 +43,7 @@ def test_frontmatter_is_valid_and_compact():
 
 
 def test_skill_covers_full_capability_matrix():
-    content = text(SKILL).lower()
+    content = corpus().lower()
     required = {
         "natural response": ["natural", "answer"],
         "planning": ["plan", "acceptance"],
@@ -69,7 +75,7 @@ def test_state_machine_and_safety_invariants_present():
 
 
 def test_adaptive_rules_avoid_process_theater():
-    content = text(SKILL).lower()
+    content = corpus().lower()
     assert "trivial" in content and "do not force" in content
     assert "prototype" in content and "throw away" in content
     assert "one behavior slice" in content

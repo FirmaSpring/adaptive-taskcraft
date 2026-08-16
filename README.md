@@ -31,6 +31,8 @@ Common layouts include:
 
 Exact discovery rules vary by host. Restart or begin a new session after installation if your agent caches skills.
 
+Load the core `SKILL.md` first. Read `references/capability-modules.md` only when the task needs a specialized domain module; this keeps progressive disclosure operational rather than merely aspirational.
+
 ## Use
 
 Load `adaptive-taskcraft` for substantive answers, software changes, debugging, reviews, integrations, and multi-step execution. The skill itself decides whether the task needs direct action, a guided workflow, or engineered controls.
@@ -48,7 +50,7 @@ Load `adaptive-taskcraft` for substantive answers, software changes, debugging, 
 
 This repository contains instructions, tests for structural invariants, source acknowledgements, and an MIT license. It does not bundle third-party code or provider-specific plugins.
 
-See [SOURCES.md](SOURCES.md) for influences and attribution.
+See [SOURCES.md](SOURCES.md) for influences and attribution. Domain-specific modules live in [`references/capability-modules.md`](references/capability-modules.md) and are loaded only when relevant.
 
 ## Test
 
